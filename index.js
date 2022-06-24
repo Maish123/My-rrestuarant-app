@@ -5,34 +5,78 @@ document.addEventListener("DOMContentLoaded",()=>{
     .then((resp)=>resp.json())
     .then((respJSON)=>{// the whole thing is a response from JSON that is why we cant call it out direct, its a tag of the response
         console.log(respJSON.categories[0].strCategory);
-        // grab the image and allocate it to the card image place
-        let image1 = document.querySelector('.card-img-top');
-        image1.src = respJSON.categories[0].strCategoryThumb;
-        //grab name of the meal
-        let foodName = document.querySelector('.card-title-1');
-        foodName.innerHTML=respJSON.categories[0].strCategory;
-        //grab meal description and add it to the sample text of the card
-        let foodDescription = document.querySelector('.card-text-1');
-        foodDescription.innerHTML= respJSON.categories[0].strCategoryDescription;
+        // grag the beef data(the image title and food description)
+        let beefImage = document.querySelector('.card-img-top');
+        beefImage.src = respJSON.categories[0].strCategoryThumb;
+        let beefName = document.querySelector('.card-title-1');
+        beefName.innerHTML=respJSON.categories[0].strCategory;
+        let beefDescription = document.querySelector('.card-text-1');
+        beefDescription.innerHTML= respJSON.categories[0].strCategoryDescription;
 
+        // grag the chicken data(the image title and food description)
+        let chickenImage = document.querySelector('#chicken-image')
+        chickenImage.src = respJSON.categories[1].strCategoryThumb;
+        let chickenName = document.querySelector('#chicken-name')
+        chickenName.innerHTML=respJSON.categories[1].strCategory;
+        let chickenDescription = document.querySelector('#chicken-describe')
+        chickenDescription.innerHTML = respJSON.categories[1].strCategoryDescription;
+        
+        //grab the Dessert data(the image title and food description)
+        let dessertImage = document.querySelector('#dessert-image');
+        dessertImage.src = respJSON.categories[2].strCategoryThumb;
+        let dessertName = document.querySelector('#dessert-name')
+        dessertName.innerHTML = respJSON.categories[2].strCategory;
+        let dessertDescription = document.querySelector('#dessert-describe')
+        dessertDescription.innerHTML = respJSON.categories[2].strCategoryDescription;
+
+        // grab the pork data(the image title and food description)
+        let porkImage = document.querySelector('#pork-image');
+        porkImage.src = respJSON.categories[6].strCategoryThumb;
+        let porkName = document.querySelector('#pork-name')
+        porkName.innerHTML =  respJSON.categories[6].strCategory;
+        let porkDescription = document.querySelector('#pork-describe')
+        porkDescription.innerHTML = respJSON.categories[6].strCategoryDescription;
     })
-
 })
-//grab specific button to orger a specific meal
+//add event listener to specific buttons
 let burgerButton=document.querySelector("#burger-button");
-//add event listener to the specific button
 burgerButton.addEventListener('click',function orderMealRequest(){
     alert("THANK YOU FOR CHOOSING UTAMU. YOUR BEEF ORDER HAS BEEN PLACED!");
-    let orderStatus = document.createElement('h6');
-    orderStatus.innerHTML = ("THANK YOU FOR CHOOSING UTAMU. YOUR BEEF ORDER HAS BEEN PLACED!")
-    //grab the card and append the paragraph on it
-    document.querySelector('#meal1').appendChild(orderStatus);
-
-
-    // orderButton.style.backgroundColor: btn-primary;
 })
-//grab elements that need to be linked with the JSON data
-//1. grab the image in the card
+//code for the star-rating
+const allStars = document.querySelectorAll('.star')
+let currentRating= document.querySelector('.cuttent-rating')
+console.log(allStars);
+allStars.forEach((star, i)=> {
+    star.addEventListener('click',function(){
+        let currentStarLevel = i + 1;
+        currentRating.innerHTML= `${currentStarLevel} 0f 5`
 
-// let image1 = document.querySelector('.card-img-top');
-// image1.src = respJSON.categories[0].strCategoryThumb;
+        allStars.forEach((star,j)=>{
+            if(currentStarLevel>=j+1){
+                star.innerHTML = '&#9733'
+            } else{
+                star.innerHTML = '&#9734'
+            }
+        })
+    })
+})
+//to manipulate the form
+const toDoForm = document.querySelector('form');
+//add event listening to the form such that when a click happens, 
+//a list of comments is potrayed
+toDoForm.addEventListener('submit',(e)=>{
+    e.preventDefault() //to prevent the form from refreshing everytime we submit
+    console.log(e)// if we call the function here the page wont refresh
+    console.log(e.target)//this shows us what exactly is beign acted on in the event, which is the form
+    handleToDo(e.target.comment.value)// this goes and targets the specific id of the input elements nested in the form, and then go down to the name tag where we can now assign a new name(value) to something we want.
+
+})
+function handleToDo(todo){
+    console.log(todo)
+    let comments = document.createElement('p')//creating an element <p>
+    comments.textContent = todo//passing our inner text as the parameter todo and in this case our todo is(e.target.comment.value) which seeks to add a text we place in the value section
+    console.log(comments)
+    let commentList = document.querySelector('#comments-section');
+    commentList.appendChild(comments);
+}

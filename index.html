@@ -54,36 +54,90 @@
       <br>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-6 bg-warning">
-            <div class="card" id="meal1" style="width:700px">
+          <div class="col-sm-6 bg-none">
+            <div class="card" id="meal1" style="width:600px">
               <img class="card-img-top" src=" " alt="Card image">
               <div class="card-body">
                 <h4 class="card-title-1">John Doe</h4>
                 <p class="card-text-1">Some example text.</p>
+                <p class="price-status"><b>PRICE: ksh. 500</b></p>
+                <p></p>
+                <p class="card-price-tag">0</p>
                 <a href="#" id="burger-button" class="btn btn-primary">ORDER NOW</a>
               </div>
             </div>
           </div>
     
           <div class="col-sm-6 bg-none">
-            <p>TASTY DRUMS</p>
-            <div class="card" style="width:600px">
-              <img class="card-img-top" src="best-fried-chicken-philadelphia-fishtown.jpg" alt="Card image">
+            <div class="card" style="width: 700px">
+              <img class="card-img-top" id="chicken-image" src="best-fried-chicken-philadelphia-fishtown.jpg" alt="Card image">
               <div class="card-body">
-                <h4 class="card-title">John Doe</h4>
-                <p class="card-text">Some example text.</p>
+                <h4 class="card-title" id="chicken-name">John Doe</h4>
+                <p class="card-text" id="chicken-describe">Some example text.</p>
                 <a href="#" class="btn btn-primary">See Profile</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 bg-none">
+            <div class="card" id="meal3" style="width:600px">
+              <img class="card-img-top" id="pork-image" src=" " alt="Card image">
+              <div class="card-body">
+                <h4 class="card-title-1" id="pork-name">John Doe</h4>
+                <p class="card-text-1" id="pork-describe">Some example text.</p>
+                <p class="price-status"><b>PRICE: ksh. 500</b></p>
+                <p></p>
+                <p class="card-price-tag">0</p>
+                <a href="#" id="burger-button" class="btn btn-primary">ORDER NOW</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-sm-6 bg-none">
+            <div class="card" style="width: 700px">
+              <img class="card-img-top" id="dessert-image" src=" " alt="Card image">
+              <div class="card-body">
+                <h4 class="card-title" id="dessert-name">John Doe</h4>
+                <p class="card-text" id="dessert-describe">Some example text.</p>
+                <a href="#" class="btn btn-primary">See Profile</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
     </div>
+    <br>
+    <div class="container mt-3">
+      <h2>Textarea</h2>
+      <p>Use the .form-control class to style textareas as well:</p>
+      <form id="create-task-form">
+        <div class="mb-3 mt-3">
+          <label for="comment">Comments:</label>
+          <textarea class="form-control" rows="2" id="comment" name="text"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
 
-
-
-
+    </div>
+    <br>
+    <div id="comments-section" style="text-align: center ;">
+    </div>
+    <br>
+    <div class="star-rating">
+      <p>How was your experience?</p>
+      <button class="star">&#9734;</button>
+      <button class="star">&#9734;</button>
+      <button class="star">&#9734;</button>
+      <button class="star">&#9734;</button>
+      <button class="star">&#9734;</button>
+      <p class="cuttent-rating"></p>
+    </div>
+    <br>
 </body>
 <script src="index.js"></script>
 </html>
