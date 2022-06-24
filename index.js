@@ -43,6 +43,8 @@ let burgerButton=document.querySelector("#burger-button");
 burgerButton.addEventListener('click',function orderMealRequest(){
     alert("THANK YOU FOR CHOOSING UTAMU. YOUR BEEF ORDER HAS BEEN PLACED!");
 })
+//add event listener to chicken button
+let chckenButton
 //code for the star-rating
 const allStars = document.querySelectorAll('.star')
 let currentRating= document.querySelector('.cuttent-rating')
