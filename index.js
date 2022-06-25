@@ -38,13 +38,25 @@ document.addEventListener("DOMContentLoaded",()=>{
         porkDescription.innerHTML = respJSON.categories[6].strCategoryDescription;
     })
 })
-//add event listener to specific buttons
+//add event listener to specific buttons(id="chicken-button", id="pork-button", id="dessert-button")
+let orderMealRequest=function(){
+    alert("SUCCESS!. YOUR ORDER HAS BEEN PLACED.");
+}
 let burgerButton=document.querySelector("#burger-button");
-burgerButton.addEventListener('click',function orderMealRequest(){
-    alert("THANK YOU FOR CHOOSING UTAMU. YOUR BEEF ORDER HAS BEEN PLACED!");
-})
-//add event listener to chicken button
-let chckenButton
+burgerButton.addEventListener('click',orderMealRequest)
+
+let chickenButton = document.querySelector("#chicken-button");
+console.log(chickenButton);
+chickenButton.addEventListener('click',orderMealRequest)
+
+let porkButton = document.querySelector("#pork-button");
+console.log(porkButton);
+porkButton.addEventListener('click',orderMealRequest)
+
+let dessertButton = document.querySelector("#dessert-button");
+console.log(dessertButton);
+dessertButton.addEventListener('click',orderMealRequest)
+
 //code for the star-rating
 const allStars = document.querySelectorAll('.star')
 let currentRating= document.querySelector('.cuttent-rating')

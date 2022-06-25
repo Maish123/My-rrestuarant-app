@@ -16,7 +16,7 @@
 <body>
   <br>
 
-    <nav class="navbar navbar-expand-sm bg-warning navbar-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:rgb(242, 218, 120);">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Logo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -33,23 +33,24 @@
             <li class="nav-item">
               <a class="nav-link" href="#">ABOUT US</a>
             </li>  
-            <li class="nav-item dropdown">
+            <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Link</a></li>
                 <li><a class="dropdown-item" href="#">Another link</a></li>
                 <li><a class="dropdown-item" href="#">A third link</a></li>
               </ul>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
     </nav>
     <br>
-    <div class="body-holder">
+    <div class="body-holder " style="background-color:rgb(253, 248, 227);">
       <div>
         <h1>UTAMU YARD</h1>
-        <p>Welcome to our Cafe UTAMU's yummy world. Try our delicacies ranging from snacks to heavy meals.<b>ORDER NOW.</b> </p>
+        <p>Welcome to our Cafe UTAMU's yummy world. We are a committed team that strives in offering the best delicacies 
+          to the masses at a fair price Try our delicacies ranging from desserts to heavy meals.<b>ORDER NOW.</b> </p>
       </div>
       <br>
       <div class="container-fluid">
@@ -60,9 +61,8 @@
               <div class="card-body">
                 <h4 class="card-title-1">John Doe</h4>
                 <p class="card-text-1">Some example text.</p>
+                <p class="card-price-tag"><b>This is our signature meal, receiving most views and orders as compared to the rest.</b></p>
                 <p class="price-status"><b>PRICE: ksh. 500</b></p>
-                <p></p>
-                <p class="card-price-tag">0</p>
                 <a href="#" id="burger-button" class="btn btn-primary">ORDER NOW</a>
               </div>
             </div>
@@ -74,7 +74,9 @@
               <div class="card-body">
                 <h4 class="card-title" id="chicken-name">John Doe</h4>
                 <p class="card-text" id="chicken-describe">Some example text.</p>
-                <a href="#" id="chicken-button" class="btn btn-primary">See Profile</a>
+                <p class="price-status"><b>PRICE: ksh. 350</b></p>
+                <a href="#" id="chicken-button" class="btn btn-primary">ORDER NOW</a>
+                
               </div>
             </div>
           </div>
@@ -89,10 +91,9 @@
               <div class="card-body">
                 <h4 class="card-title-1" id="pork-name">John Doe</h4>
                 <p class="card-text-1" id="pork-describe">Some example text.</p>
-                <p class="price-status"><b>PRICE: ksh. 500</b></p>
-                <p></p>
-                <p class="card-price-tag">0</p>
-                <a href="#" id="burger-button" class="btn btn-primary">ORDER NOW</a>
+                <p class="price-status"><b>PRICE: ksh. 600</b></p>
+                <p class="card-price-tag"></p>
+                <a href="#" id="pork-button" class="btn btn-primary">ORDER NOW</a>
               </div>
             </div>
           </div>
@@ -103,31 +104,28 @@
               <div class="card-body">
                 <h4 class="card-title" id="dessert-name">John Doe</h4>
                 <p class="card-text" id="dessert-describe">Some example text.</p>
-                <a href="#" class="btn btn-primary">See Profile</a>
+                <p class="price-status"><b>PRICE: ksh. 350</b></p>
+                <a href="#" id="dessert-button" class="btn btn-primary">ORDER NOW</a>
+                
               </div>
             </div>
           </div>
         </div>
       </div>
-      <br>
+      <div class="container mt-3">
+        <h2>TALK TO US</h2>
+        <p>Write to us so we may know how you feel about our hotel and the steps we should take to improve our experience to you, <b>our beloved customer.</b> </p>
+        <form id="create-task-form">
+          <div class="mb-3 mt-3">
+            <label for="comment">Comments:</label>
+            <textarea class="form-control" rows="2" id="comment" name="text"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div id="comments-section" style="text-align: center ;">
+      </div>
     </div>
-    <br>
-    <div class="container mt-3">
-      <h2>Textarea</h2>
-      <p>Use the .form-control class to style textareas as well:</p>
-      <form id="create-task-form">
-        <div class="mb-3 mt-3">
-          <label for="comment">Comments:</label>
-          <textarea class="form-control" rows="2" id="comment" name="text"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-
-    </div>
-    <br>
-    <div id="comments-section" style="text-align: center ;">
-    </div>
-    <br>
     <div class="star-rating">
       <p>How was your experience?</p>
       <button class="star">&#9734;</button>
@@ -137,7 +135,6 @@
       <button class="star">&#9734;</button>
       <p class="cuttent-rating"></p>
     </div>
-    <br>
 </body>
 <script src="index.js"></script>
 </html>
