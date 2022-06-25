@@ -22,8 +22,8 @@ My restaurant app is an online menu made for UTAMADUNI, a restaurant looking to 
 This web app is hosted by github and is completely free. In  order to access just go here
 
 ## RESULTS
-![landing-demo](images/Landing.PNG)
+![front-page-section](images/landing%20Page.png)
 
-![order-demo](images/Order.PNG)
+![order-meal-section](images/contents%20page.png)
 
-![rate-comments-demo](images/Rate.PNG)
+![overal-comments-section](images/contents%20page.png)
