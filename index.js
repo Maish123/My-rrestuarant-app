@@ -102,15 +102,15 @@ const toDoForm = document.querySelector('form');
 toDoForm.addEventListener('submit',(e)=>{
     e.preventDefault() //to prevent the form from refreshing everytime we submit
     console.log(e)// if we call the function here the page wont refresh
-    console.log(e.target)//this shows us what exactly is beign acted on in the event, which is the form
-    handleToDo(e.target.comment.value)// this goes and targets the specific id of the input elements nested in the form, and then go down to the name tag where we can now assign a new name(value) to something we want.
+    console.log(e.target)
+    handleToDo(e.target.comment.value)
     toDoForm.reset()
 
 })
 function handleToDo(todo){
     console.log(todo)
-    let comments = document.createElement('p')//creating an element <p>
-    comments.textContent = todo//passing our inner text as the parameter todo and in this case our todo is(e.target.comment.value) which seeks to add a text we place in the value section
+    let comments = document.createElement('p')
+    comments.textContent = todo
     console.log(comments)
     let commentList = document.querySelector('#comments-section');
     commentList.appendChild(comments);
