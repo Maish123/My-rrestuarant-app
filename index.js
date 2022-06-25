@@ -66,7 +66,7 @@ porkButton.addEventListener('click',function orderPorkStatus(){
     let porkStatus=document.createElement('p');
     porkStatus.textContent = "ORDER WILL BE READY IN 8 MINUTES!"
     document.querySelector('#pork-status').appendChild(porkStatus)
-})
+});
 
 let dessertButton = document.querySelector("#dessert-button");
 console.log(dessertButton);
@@ -75,9 +75,8 @@ dessertButton.addEventListener('click',function orderDessertStatus(){
     let porkStatus=document.createElement('p');
     porkStatus.textContent = "ORDER WILL BE READY IN 20 MINUTES!"
     document.querySelector('#dessert-status').appendChild(porkStatus)
-})
+});
 
-//code for the star-rating
 const allStars = document.querySelectorAll('.star')
 let currentRating= document.querySelector('.cuttent-rating')
 console.log(allStars);
@@ -95,13 +94,10 @@ allStars.forEach((star, i)=> {
         })
     })
 })
-//to manipulate the form
 const toDoForm = document.querySelector('form');
-//add event listening to the form such that when a click happens, 
-//a list of comments is potrayed
 toDoForm.addEventListener('submit',(e)=>{
-    e.preventDefault() //to prevent the form from refreshing everytime we submit
-    console.log(e)// if we call the function here the page wont refresh
+    e.preventDefault()
+    console.log(e)
     console.log(e.target)
     handleToDo(e.target.comment.value)
     toDoForm.reset()
