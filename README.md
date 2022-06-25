@@ -26,4 +26,4 @@ This web app is hosted by github and is completely free. In  order to access jus
 
 ![order-meal-section](images/contents%20page.png)
 
-![overal-comments-section](images/contents%20page.png)
+![order-meal-section](images/comments%20section.png)
