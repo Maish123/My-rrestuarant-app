@@ -84,6 +84,7 @@ toDoForm.addEventListener('submit',(e)=>{
     console.log(e)// if we call the function here the page wont refresh
     console.log(e.target)//this shows us what exactly is beign acted on in the event, which is the form
     handleToDo(e.target.comment.value)// this goes and targets the specific id of the input elements nested in the form, and then go down to the name tag where we can now assign a new name(value) to something we want.
+    toDoForm.reset()
 
 })
 function handleToDo(todo){
