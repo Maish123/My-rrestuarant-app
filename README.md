@@ -27,3 +27,11 @@ This web app is hosted by github and is completely free. In  order to access jus
 ![order-meal-section](images/contents%20page.png)
 
 ![order-meal-section](images/comments%20section.png)
+
+## Usage
+* Get desired meals in a effective. 
+* Comments and rate section and having the data appended.
+* Learn how to conceptualize website from scratch and host it on github pages. 
+
+## Challenges 
+* Having to clearly and effectively express what is on paper on the site.
