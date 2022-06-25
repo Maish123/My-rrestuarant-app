@@ -70,7 +70,12 @@ porkButton.addEventListener('click',function orderPorkStatus(){
 
 let dessertButton = document.querySelector("#dessert-button");
 console.log(dessertButton);
-dessertButton.addEventListener('click',function orderPorkStatus())
+dessertButton.addEventListener('click',function orderDessertStatus(){
+    orderMealRequest()
+    let porkStatus=document.createElement('p');
+    porkStatus.textContent = "ORDER WILL BE READY IN 20 MINUTES!"
+    document.querySelector('#dessert-status').appendChild(porkStatus)
+})
 
 //code for the star-rating
 const allStars = document.querySelectorAll('.star')
