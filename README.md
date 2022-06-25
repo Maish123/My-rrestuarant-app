@@ -21,4 +21,9 @@ My restaurant app is an online menu made for UTAMADUNI, a restaurant looking to 
 # How to display?
 This web app is hosted by github and is completely free. In  order to access just go here
 
-## Functionality
+## RESULTS
+![landing-demo](images/Landing.PNG)
+
+![order-demo](images/Order.PNG)
+
+![rate-comments-demo](images/Rate.PNG)
